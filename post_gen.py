@@ -15,10 +15,10 @@ def generate_telegram_post(BlazeVersion, codename, device, date, maintainer):
     return post
 
 def get_user_input():
-    BlazeVersion = input("Enter Blaze Version: ")
+    BlazeVersion = 3.1
     codename = input("Enter device codename: ")
     device = input("Enter device name: ")
-    date =  datetime.date.today()
+    date =  datetime.date.today().strftime("%d-%m-%Y")
     maintainer = input("Enter maintainer name (Don't use @): ")
     return BlazeVersion, codename, device, date, maintainer
 
