@@ -1,3 +1,5 @@
+import datetime
+
 def generate_telegram_post(BlazeVersion, codename, device, date, maintainer):
     post = f"\n#Blaze #{codename} #Android14 #U #Stable\n"
     post += f"Project Blaze v{BlazeVersion} - OFFICIAL | Android 14\n"
@@ -16,7 +18,7 @@ def get_user_input():
     BlazeVersion = input("Enter Blaze Version: ")
     codename = input("Enter device codename: ")
     device = input("Enter device name: ")
-    date = input("Enter build date: ")
+    date =  datetime.date.today()
     maintainer = input("Enter maintainer name (Don't use @): ")
     return BlazeVersion, codename, device, date, maintainer
 
