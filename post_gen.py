@@ -18,7 +18,7 @@ def get_user_input():
     BlazeVersion = input("Enter Blaze Version: ")
     codename = input("Enter device codename: ")
     device = input("Enter device name: ")
-    date =  datetime.date.today()
+    date =  datetime.date.today().strftime("%d-%m-%Y")
     maintainer = input("Enter maintainer name (Don't use @): ")
     return BlazeVersion, codename, device, date, maintainer
 
