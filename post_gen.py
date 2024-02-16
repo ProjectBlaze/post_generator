@@ -1,5 +1,6 @@
 def generate_telegram_post(BlazeVersion, codename, device, date, maintainer):
-    post = f"Project Blaze v{BlazeVersion} - OFFICIAL | Android 14\n"
+    post = f"\n#Blaze #{codename} #Android14 #U #Stable\n"
+    post += f"Project Blaze v{BlazeVersion} - OFFICIAL | Android 14\n"
     post += f"📲 : {device} ({codename})\n"
     post += f"📅 : {date}\n"
     post += f"🧑‍: @{maintainer}\n\n"
@@ -9,7 +10,6 @@ def generate_telegram_post(BlazeVersion, codename, device, date, maintainer):
     post += f"▪️ Support Group \n"
     post += f"▪️ Community Chat \n"
     post += f"▪️ Updates Channel \n"
-    post += f"\n#Blaze #{codename} #Android14 #U #Stable"
     return post
 
 def get_user_input():
@@ -17,7 +17,7 @@ def get_user_input():
     codename = input("Enter device codename: ")
     device = input("Enter device name: ")
     date = input("Enter build date: ")
-    maintainer = input("Enter maintainer name: ")
+    maintainer = input("Enter maintainer name (Don't use @): ")
     return BlazeVersion, codename, device, date, maintainer
 
 def main():
